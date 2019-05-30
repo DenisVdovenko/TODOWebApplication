@@ -1,5 +1,6 @@
+<%@ page import="model.TODO" %>
 <%@ page import="java.util.List" %>
-<%@ page import="model.TODO" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: den
   Date: 29.05.19
@@ -16,7 +17,7 @@ Your todo list
 
 <%
     List<TODO> todoList = (List<TODO>) request.getAttribute("todoList");
-    for (TODO todoItem:todoList) {
+    for (TODO todoItem : todoList) {
 %>
 
 <p>

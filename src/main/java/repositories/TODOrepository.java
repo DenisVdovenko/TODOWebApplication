@@ -16,22 +16,23 @@ public class TODOrepository {
     public List<TODO> getTodoes(String username) {
         List<TODO> items = new ArrayList<>();
         String filePath = getTodoFilePathByUserName(username);
-        try (Scanner scanner = new Scanner(new FileInputStream(filePath))){
+        try (Scanner scanner = new Scanner(new FileInputStream(filePath))) {
             long itemCount = scanner.nextLong();
-            for (long itemNumber = 0; itemNumber < itemCount; itemNumber++){
+            for (long itemNumber = 0; itemNumber < itemCount; itemNumber++) {
                 extractTODOFromScanner(items, scanner);
             }
         } catch (FileNotFoundException e) {
             System.out.println(e);
         }
-        return items
+        return items;
     }
 
     private void extractTODOFromScanner(List<TODO> items, Scanner scanner) {
         Long id = scanner.nextLong();
+        scanner.nextLine();
         String comment = scanner.nextLine();
-        Boolean isDone = scanner.nextBoolean();
-        items.add(new TODO(id, isDone, comment));
+        String isDone = scanner.nextLine();
+        items.add(new TODO(id, Boolean.valueOf(isDone), comment));
     }
 
     private static String getTodoFilePathByUserName(String username) {

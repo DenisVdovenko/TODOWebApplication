@@ -16,7 +16,7 @@ public class TODOController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("todoList", todoService.getMyTODOList());
+        req.setAttribute("todoList", todoService.getUsersTodoList("user1"));
         req.getRequestDispatcher("/user/todo.jsp").forward(req, resp);
     }
 }
