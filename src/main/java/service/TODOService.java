@@ -7,10 +7,10 @@ import java.util.Collection;
 
 public class TODOService {
 
-    private TODOrepository todOrepository = new TODOrepository();
+    private TODOrepository todorepository = new TODOrepository();
 
     public Collection<TODO> getUsersTodoList(String username) {
-        return todOrepository.getTodoes(username);
+        return todorepository.getTodoes(username);
     }
 
 }
