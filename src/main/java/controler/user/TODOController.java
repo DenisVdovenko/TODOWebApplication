@@ -1,4 +1,4 @@
-package controler;
+package controler.user;
 
 import service.TODOService;
 
@@ -16,7 +16,8 @@ public class TODOController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("todoList", todoService.getUsersTodoList("user1"));
+        String login = (String) req.getSession().getAttribute("login");
+        req.setAttribute("todoList", todoService.getUsersTodoList(login));
         req.getRequestDispatcher("/user/todo.jsp").forward(req, resp);
     }
 }
