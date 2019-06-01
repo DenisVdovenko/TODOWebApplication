@@ -29,7 +29,7 @@
                     <input type="submit" name="login" value="Login">
                 </td>
                 <td>
-                    <a href="registration">Registration</a>
+                    <a href="registrations">Registration</a>
                 </td>
             </tr>
         </table>

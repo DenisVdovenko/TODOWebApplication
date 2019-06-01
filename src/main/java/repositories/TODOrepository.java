@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class TODOrepository {
 
     public static final String FILE_POSTFIX = "todo.txt";
-    private static String FILE_PATH = "/home/den/IdeaProjects/TODOWebApplication/tododata/";
+    private static String FILE_PATH = "C:\\Projects\\tododata\\";
 
     public List<TODO> getTodoes(String username) {
         List<TODO> items = new ArrayList<>();
