@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class UserRepository {
 
-    private static String FILE_PATH = "/home/den/IdeaProjects/ToDoWebApplication/tododata/credentials.txt";
+    private static String FILE_PATH = "/home/den/IdeaProjects/TODOWebApplication/tododata/credentials.txt";
 
     public List<User> getUsers() {
         List<User> items = new ArrayList<>();

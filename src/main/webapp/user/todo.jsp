@@ -13,22 +13,44 @@
     <title>TODO</title>
 </head>
 <body>
-Your todo list
+<div>
+    <h2 >Your TODO list</h2>
+    <table border="2" bgcolor="#f0f8ff">
+        <tr bgcolor="aqua">
+            <td>
+                №
+            </td>
+            <td>
+                Plan description (comment)
+            </td>
+            <td>
+                Done
+            </td>
+        </tr>
 
-<%
-    List<TODO> todoList = (List<TODO>) request.getAttribute("todoList");
-    for (TODO todoItem : todoList) {
-%>
+        <%
+            List<TODO> todoList = (List<TODO>) request.getAttribute("todoList");
+            for (TODO todoItem : todoList) {
+        %>
 
-<p>
-    <%=todoItem.getId()%>
-    <%=todoItem.getComment()%>
-    <%=todoItem.isDone()%>
-</p>
+        <tr>
+            <td>
+                <%=todoItem.getId()%>
+            </td>
+            <td>
+                <%=todoItem.getComment()%>
+            </td>
+            <td>
+                <%=todoItem.isDone()%>
+            </td>
+        </tr>
 
-<%
-    }
-%>
+        <%
+            }
+        %>
+
+    </table>
+</div>
 
 
 </body>
